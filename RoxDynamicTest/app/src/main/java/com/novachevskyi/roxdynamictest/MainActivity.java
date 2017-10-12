@@ -56,6 +56,6 @@ public class MainActivity extends AppCompatActivity {
     private boolean getRoxFlagValue() {
         RoxDynamicAPI dynamicApi = Rox.dynamicAPI();
 
-        return dynamicApi.getBool("dynamicTestFeatureFlag", false);
+        return dynamicApi.isEnabled("dynamicTestFeatureFlag", false);
     }
 }
