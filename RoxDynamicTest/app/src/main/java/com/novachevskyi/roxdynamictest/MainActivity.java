@@ -56,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
         Rox.setCustomStringProperty("uid", "466664644630110208");
 
         Rox.sync();
+        Rox.unfreeze();
     }
 
     private boolean getRoxFlagValue() {
