@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import io.rollout.android.Rox;
 import io.rollout.client.RoxDynamicAPI;
+import io.rollout.client.RoxOptions;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -44,7 +45,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setupRox() {
-        Rox.setup(this.getApplication());
+        RoxOptions options = new RoxOptions.Builder()
+                .withVerboseLevel(RoxOptions.VerboseLevel.VERBOSE_LEVEL_DEBUG)
+                .build();
+
+        Rox.setup(this.getApplication(), options);
     }
 
     private void setRoxUidProperty() {
